@@ -6,14 +6,14 @@ import logo from '../assets/logo.svg'
 const Header = () => {
   return (
     <header>
-        <Navbar className='nav' variant='dark' expand='md' collapseOnSelect>
+        <Navbar className='navbar' expand='md' collapseOnSelect>
             <Container>
-                <Navbar.Brand href='/'><img src={logo} width="50"/> CheckOut</Navbar.Brand>
+                <Navbar.Brand className='logo' href='/'><img src={logo} width="35"/> CheckOut</Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav'/>
                 <Navbar.Collapse id='basic-navbar-nav'>
-                    <Nav className='ms-auto'>
-                        <Nav.Link href='/cart'><FaShoppingCart/>Cart</Nav.Link>
-                        <Nav.Link href='/login'><FaUser/>Sign In</Nav.Link>
+                    <Nav className='ms-auto nav'>
+                        <Nav.Link href='/cart' className='tab'><FaShoppingCart/>Cart</Nav.Link>
+                        <Nav.Link href='/login' className='tab' id='sign-in'><FaUser/>Sign In</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

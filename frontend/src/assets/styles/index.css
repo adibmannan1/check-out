@@ -51,9 +51,35 @@ table th {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-.nav{
-  background-color: #1f031d;
+.navbar{
+  background: none;
 }
 .main{
   color: #968f9c;
+}
+.logo{
+  font-family: 'Koulen', cursive;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+#sign-in{
+  background-color: #2d052b;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5em 0em;
+  width: 100px;
+  text-align: center;
+}
+.tab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #5b0c57aa;
 }
