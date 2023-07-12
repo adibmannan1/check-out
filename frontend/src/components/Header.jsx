@@ -8,12 +8,12 @@ const Header = () => {
     <header>
         <Navbar className='navbar' expand='md' collapseOnSelect>
             <Container>
-                <Navbar.Brand className='logo' href='/'><img src={logo} width="35"/> CheckOut</Navbar.Brand>
+                <Navbar.Brand className='logo' href='/'><img src={logo} width="35"/> Check<span>Out</span></Navbar.Brand>
                 <Navbar.Toggle aria-controls='basic-navbar-nav'/>
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='ms-auto nav'>
-                        <Nav.Link href='/cart' className='tab'><FaShoppingCart/>Cart</Nav.Link>
-                        <Nav.Link href='/login' className='tab' id='sign-in'><FaUser/>Sign In</Nav.Link>
+                        <Nav.Link href='/cart' className='tab' id='cart'><FaShoppingCart/>Cart</Nav.Link>
+                        <Nav.Link href='/login' className='tab' id='sign-in'><FaUser className='icon'/>Sign In</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

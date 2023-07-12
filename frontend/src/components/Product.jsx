@@ -3,16 +3,16 @@ import { Card } from 'react-bootstrap'
 
 const Product = ({product}) => {
   return (
-    <Card className='my-3 p-3 rounded'>
-        <a href={`/products/${product._id}`}>
-            <Card.Img src={product.image} variant='top'></Card.Img>
+    <Card className='my-3 p-2 rounded card'>
+        <a href={`/products/${product._id}`} className='img' >
+            <Card.Img className='img' src={product.image} variant='top'></Card.Img>
         </a>
-        <Card.Body>
+        <Card.Body className='cardBody'>
             <a href={`/products/${product._id}`}>
-                <Card.Title as="div">
+                <Card.Title as="div" className='product-title'>
                     <strong>{product.name}</strong>
                 </Card.Title>
-                <Card.Text as="h3">
+                <Card.Text as="h3" className='price'>
                     ${product.price}
                 </Card.Text>
             </a>

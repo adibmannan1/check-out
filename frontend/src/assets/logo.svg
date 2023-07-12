@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1919.56 1919.57">
-  <path d="M0,0H0C472.88,0,856.81,383.92,856.81,856.8H0V0H0Z" style="fill: #571f4f;"/>
-  <rect x="1062.76" y="0" width="856.81" height="856.81" rx="428.4" ry="428.4" style="fill: #571f4f;"/>
-  <rect x="0" y="1062.76" width="856.81" height="856.81" style="fill: #571f4f;"/>
-  <rect x="1062.76" y="1062.77" width="856.81" height="856.81" style="fill: #571f4f;"/>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1919.57 1919.58">
+  <path d="M0,0H0C472.88,0,856.81,383.92,856.81,856.8H0V0H0Z" style="fill: #082750;"/>
+  <rect x="1062.76" y="0" width="856.81" height="856.81" rx="428.4" ry="428.4" style="fill: #82a9d6;"/>
+  <rect y="1062.76" width="856.81" height="856.81" style="fill: #082750;"/>
+  <rect x="1062.76" y="1062.77" width="856.81" height="856.81" style="fill: #2c619b;"/>
 </svg>
