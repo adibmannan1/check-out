@@ -53,6 +53,19 @@ const products = [
   },
   {
     _id: '5',
+    name: 'Sound Box',
+    image: '/images/sound box.jpg',
+    description:
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+    brand: 'AKA',
+    category: 'Electronics',
+    price: 59.99,
+    countInStock: 10,
+    rating: 5,
+    numReviews: 2,
+  },
+  {
+    _id: '6',
     name: 'Logitech G-Series Gaming Mouse',
     image: '/images/mouse.jpg',
     description:
@@ -65,7 +78,7 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '6',
+    _id: '7',
     name: 'Amazon Echo Dot 3rd Generation',
     image: '/images/alexa.jpg',
     description:
@@ -76,6 +89,19 @@ const products = [
     countInStock: 0,
     rating: 4,
     numReviews: 12,
+  },
+  {
+    _id: '8',
+    name: 'Tech Box',
+    image: '/images/techBox.jpg',
+    description:
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+    brand: 'Check Out',
+    category: 'Electronics',
+    price: 19.99,
+    countInStock: 5,
+    rating: 3,
+    numReviews: 42,
   },
 ]
 
