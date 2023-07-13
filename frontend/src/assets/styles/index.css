@@ -2,9 +2,11 @@ main {
   min-height: 80vh;
 }
 *{
-  background-color: rgb(237, 247, 252);
   font-family: 'Raleway', sans-serif;
   text-decoration: none !important;
+}
+.all{
+  background: linear-gradient(0deg, rgb(211, 228, 235) 0%, rgb(237, 247, 252) 100%);
 }
 .rating span {
   margin: 0.1rem;
@@ -116,6 +118,7 @@ table th {
 .home-screen-heading{
   color: #082750;
   font-weight: 800;
+  font-size: 2em;
   text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: 0;
