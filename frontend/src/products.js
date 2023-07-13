@@ -1,16 +1,16 @@
 const products = [
   {
     _id: '1',
-    name: 'Airpods Wireless Bluetooth Headphones',
-    image: '/images/airpods.jpg',
+    name: 'Sound Box',
+    image: '/images/sound box.jpg',
     description:
-      'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
-    brand: 'Apple',
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+    brand: 'AKA',
     category: 'Electronics',
-    price: 89.99,
+    price: 59.99,
     countInStock: 10,
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 2,
   },
   {
     _id: '2',
@@ -22,7 +22,7 @@ const products = [
     category: 'Electronics',
     price: 599.99,
     countInStock: 7,
-    rating: 4.0,
+    rating: 1.5,
     numReviews: 8,
   },
   {
@@ -36,7 +36,7 @@ const products = [
     price: 929.99,
     countInStock: 5,
     rating: 3,
-    numReviews: 12,
+    numReviews: 14,
   },
   {
     _id: '4',
@@ -53,16 +53,16 @@ const products = [
   },
   {
     _id: '5',
-    name: 'Sound Box',
-    image: '/images/sound box.jpg',
+    name: 'Airpods Wireless Bluetooth Headphones',
+    image: '/images/airpods.jpg',
     description:
-      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
-    brand: 'AKA',
+      'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
+    brand: 'Apple',
     category: 'Electronics',
-    price: 59.99,
+    price: 89.99,
     countInStock: 10,
-    rating: 5,
-    numReviews: 2,
+    rating: 4.5,
+    numReviews: 20,
   },
   {
     _id: '6',
@@ -88,7 +88,7 @@ const products = [
     price: 29.99,
     countInStock: 0,
     rating: 4,
-    numReviews: 12,
+    numReviews: 30,
   },
   {
     _id: '8',
