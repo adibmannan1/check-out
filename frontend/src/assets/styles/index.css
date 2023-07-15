@@ -195,14 +195,12 @@ table th {
 }
 .product-screen-container{
   margin-top: 0;
-  width: 100%;
-  margin: auto;
 }
 .product-screen-container2{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   margin: auto;
 }
 .product-screen-img-container{
@@ -219,11 +217,15 @@ table th {
   width: 400px;
   border-radius: 7px;
 }
+.product-screen-rating{
+  font-size: 5em;
+}
+
 .product-screen-text{
   max-width: 500px;
   height: 470px;
   background-color: white;
-  padding: 1em;
+  padding: 2em;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -269,7 +271,7 @@ table th {
 }
 .product-screen-price{
   font-size: 3em;
-  color: #758298;
+  color: #82a9d6;
   font-weight: 600;
 }
 .product-screen-button{

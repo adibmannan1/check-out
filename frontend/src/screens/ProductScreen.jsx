@@ -15,7 +15,7 @@ const ProductScreen = () => {
             <div className='product-screen-container2'>
                 <div className='product-screen-img-container'>
                     <img src={product.image} alt={product.name} fluid className='product-screen-img'/>
-                    <Rating value={product.rating} text={`(${product.numReviews})`}/>
+                    <Rating className="product-screen-rating" value={product.rating} text={`(${product.numReviews})`}/>
                 </div>
                 <div className="product-screen-text">
                     <div className="product-screen-text-upper">
@@ -36,7 +36,7 @@ const ProductScreen = () => {
                     </div>
                     <div className="product-screen-lower">
                         <div className='product-screen-price'>
-                            <span className='num'>${product.price}</span>
+                        <span className='num'><span className='num' style={{ color: '#082750', marginRight: '5px'}}>$</span>{product.price}</span>
                         </div>
                         <Button className='btn-block product-screen-button' type='button' disabled={product.countInStock===0}>
                             Add to Cart
