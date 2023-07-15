@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 .main {
   min-height: 80vh;
   padding-top: 0px !important;
@@ -10,7 +13,7 @@
   background: linear-gradient(0deg, rgb(213, 229, 236) 0%, rgb(237, 247, 252) 100%);
 }
 .num{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 .rating span {
   margin: 0.1rem;
@@ -172,7 +175,6 @@ table th {
   color: #041d40;
   font-weight: 700;
   background-color: white;
-  font-family: 'Montserrat', sans-serif;
 }
 .product-title, .product-title strong{
   background-color: white;
@@ -193,28 +195,94 @@ table th {
 }
 .product-screen-container{
   margin-top: 0;
+  width: 100%;
+  margin: auto;
 }
 .product-screen-container2{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: auto;
 }
+.product-screen-img-container{
+  background-color: white;
+  border-radius: 10px;
+  padding: 2em;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .product-screen-img{
-  max-width: 500px;
+  width: 400px;
   border-radius: 7px;
 }
+.product-screen-text{
+  max-width: 500px;
+  height: 470px;
+  background-color: white;
+  padding: 1em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .product-screen-title{
   color: black;
   font-weight: 700;
-  margin-bottom: 0px;
-  font-size: 2.2em;
+  margin-bottom: 7px;
+  font-size: 2.3em;
 }
 .product-screen-subtitle{
   color: rgba(0, 0, 0, 0.3);
   font-weight: 500;
-  font-size: 1.2em;
-  margin-bottom: 50px;
+  font-size: 1.3em;
+  margin-bottom: 20px;
 }
-
-
+.product-screen-description{
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: 500;
+  font-size: 1em;
+  margin-bottom: 0px;
+  max-width: 95%;
+}
+.product-screen-status-green{
+  color: rgb(2, 147, 86);
+  background-color: rgb(144, 231, 195);
+  width: 80px;
+  text-align: center;
+  padding: 3px 5px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.product-screen-status-red{
+  color: rgb(186, 13, 59);
+  background-color: rgb(226, 121, 149);
+  width: 120px;
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.product-screen-price{
+  font-size: 3em;
+  color: #758298;
+  font-weight: 600;
+}
+.product-screen-button{
+  margin-top: 10px;
+  background-color: #082750;
+  box-shadow: 5px 8px 15px rgba(33, 0, 36, 0.1);
+  transition: all 0.15s ease-in-out;
+}
+.product-screen-button:hover{
+  background-color: #164889;
+  color: white;
+  box-shadow: 5px 8px 25px rgba(1, 34, 90, 0.25);
+}
 
 /* footer */
 .footer-text{

@@ -13,33 +13,35 @@ const ProductScreen = () => {
         <div className='product-screen-container'>
             <Link className='btn btn-light my-3' id='product-screen-back' to='/'>Go Back</Link>
             <div className='product-screen-container2'>
-                <div>
+                <div className='product-screen-img-container'>
                     <img src={product.image} alt={product.name} fluid className='product-screen-img'/>
+                    <Rating value={product.rating} text={`(${product.numReviews})`}/>
                 </div>
                 <div className="product-screen-text">
-                    <div>
-                        <h3 className='product-screen-title num'>{product.name}</h3>
+                    <div className="product-screen-text-upper">
+                        <div>
+                            <h3 className='product-screen-title num'>{product.name}</h3>
+                        </div>
+                        <div>
+                            <h3 className='product-screen-subtitle'>{product.subtitle}</h3>
+                        </div>
+                        <div className={product.countInStock > 0? `product-screen-status-green`:`product-screen-status-red`}>
+                            <strong>
+                                {product.countInStock > 0? 'In Stock':'Out of Stock'}
+                            </strong>
+                        </div>
+                        <div className='product-screen-description'>
+                            {product.description}
+                        </div>
                     </div>
-                    <div>
-                        <h3 className='product-screen-subtitle'>{product.subtitle}</h3>
+                    <div className="product-screen-lower">
+                        <div className='product-screen-price'>
+                            <span className='num'>${product.price}</span>
+                        </div>
+                        <Button className='btn-block product-screen-button' type='button' disabled={product.countInStock===0}>
+                            Add to Cart
+                        </Button>
                     </div>
-                    <div>
-                        <Rating value={product.rating} text={`(${product.numReviews})`}/>
-                    </div>
-                    <div>
-                        <span className='num'>${product.price}</span>
-                    </div>
-                    <div>
-                        {product.description}
-                    </div>
-                    <div>
-                        <strong>
-                            {product.countInStock > 0? 'In Stock':'Out of Stock'}
-                        </strong>
-                    </div>
-                    <Button className='btn-block' type='button' disabled={product.countInStock===0}>
-                        Add to Cart
-                    </Button>
                 </div>
             </div>
         </div>

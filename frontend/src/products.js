@@ -5,7 +5,7 @@ const products = [
     subtitle: 'Sound System',
     image: '/images/soundverse.jpg',
     description:
-      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space. The Harmony Sound Bar redefines the way you enjoy audio.',
     brand: 'AKA',
     category: 'Electronics',
     price: 59.99,
@@ -23,7 +23,7 @@ const products = [
     brand: 'Apple',
     category: 'Electronics',
     price: 599.99,
-    countInStock: 7,
+    countInStock: 0,
     rating: 1.5,
     numReviews: 8,
   },
@@ -103,7 +103,7 @@ const products = [
     subtitle: 'Mystery Box',
     image: '/images/transformstate.jpg',
     description:
-      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
+      'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space. ',
     brand: 'Check Out',
     category: 'Electronics',
     price: 19.99,
