@@ -1,1 +1,21 @@
-{}
+{
+  "name": "check-out",
+  "version": "1.0.0",
+  "description": "MERN stack eCommerce app",
+  "type": "module",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adibmannan1/check-out.git"
+  },
+  "author": "MD ADIB MANNAN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adibmannan1/check-out/issues"
+  },
+  "homepage": "https://github.com/adibmannan1/check-out#readme"
+}
