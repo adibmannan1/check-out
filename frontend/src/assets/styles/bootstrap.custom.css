@@ -4113,9 +4113,10 @@ fieldset:disabled .btn {
   line-height: 1;
   color: var(--bs-navbar-color);
   background-color: transparent;
-  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-  border-radius: var(--bs-navbar-toggler-border-radius);
+  /* border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius); */
   transition: var(--bs-navbar-toggler-transition);
+  border: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
@@ -4125,16 +4126,17 @@ fieldset:disabled .btn {
 .navbar-toggler:hover {
   text-decoration: none;
 }
-.navbar-toggler:focus {
+/* .navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
-}
+  border: none;
+} */
 
 .navbar-toggler-icon {
   display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
+  width: 2.5em;
+  height: 2.5em;
   vertical-align: middle;
   background-image: var(--bs-navbar-toggler-icon-bg);
   background-repeat: no-repeat;
