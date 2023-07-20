@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: '1',
     name: 'Soundverse',
     subtitle: 'Sound System',
     image: '/images/soundverse.jpg',
@@ -14,7 +13,6 @@ const products = [
     numReviews: 2,
   },
   {
-    _id: '2',
     name: 'iPhone 11 Pro 256GB Memory',
     subtitle: 'Cell Phone',
     image: '/images/phone.jpg',
@@ -28,7 +26,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: '3',
     name: 'Cannon EOS 80D DSLR Camera',
     subtitle: 'Camera',
     image: '/images/camera.jpg',
@@ -42,7 +39,6 @@ const products = [
     numReviews: 14,
   },
   {
-    _id: '4',
     name: 'Sony Playstation 4 Pro White Version',
     subtitle: 'Console',
     image: '/images/playstation.jpg',
@@ -56,7 +52,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: '5',
     name: 'Airpods Wireless Bluetooth Headphones',
     subtitle: 'Earphone',
     image: '/images/airpods.jpg',
@@ -70,7 +65,6 @@ const products = [
     numReviews: 20,
   },
   {
-    _id: '6',
     name: 'Logitech G-Series',
     subtitle: 'Mouse',
     image: '/images/mouse.jpg',
@@ -84,7 +78,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: '7',
     name: 'Amazon Echo Dot 3rd Generation',
     subtitle: 'Assistant',
     image: '/images/alexa.jpg',
@@ -98,7 +91,6 @@ const products = [
     numReviews: 30,
   },
   {
-    _id: '8',
     name: 'TransformState',
     subtitle: 'Mystery Box',
     image: '/images/transformstate.jpg',
