@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Rating from '../components/Rating';
 import { useGetProductDetailsQuery } from '../slices/productSlice';
+import Loader from '../components/Loader';
 
 
 
@@ -15,7 +16,7 @@ const ProductScreen = () => {
 
     return (
         <>
-        {   isLoading? (<h2>loading</h2>) : 
+        {   isLoading? (<Loader/>) : 
             error? (<div>{error?.data?.message || error?.error}</div>) : 
             (<div className='product-screen-container'>
             <Link className='btn btn-light my-3' id='product-screen-back' to='/'>Go Back</Link>

@@ -2,6 +2,7 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap';
 import Product from '../components/Product';
 import { useGetProductsQuery } from '../slices/productSlice';
+import Loader from '../components/Loader';
 
 const HomeScreen = () => {
   // fetching data
@@ -9,7 +10,7 @@ const HomeScreen = () => {
 
   return (
     <>
-      { isLoading? (<h2>loading</h2>) : 
+      { isLoading? (<Loader/>) : 
         error? (<div>{error?.data?.message || error?.error}</div>) : 
         (
           <>
