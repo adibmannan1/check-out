@@ -3,6 +3,7 @@ import {Row, Col} from 'react-bootstrap';
 import Product from '../components/Product';
 import { useGetProductsQuery } from '../slices/productSlice';
 import Loader from '../components/Loader';
+import Message from '../components/Message';
 
 const HomeScreen = () => {
   // fetching data
@@ -11,7 +12,7 @@ const HomeScreen = () => {
   return (
     <>
       { isLoading? (<Loader/>) : 
-        error? (<div>{error?.data?.message || error?.error}</div>) : 
+        error? (<Message variant='danger'>{error?.data?.message || error?.error}</Message>) : 
         (
           <>
             <h1 className='home-screen-heading'>Newest Products</h1>
