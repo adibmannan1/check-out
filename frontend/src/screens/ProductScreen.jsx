@@ -1,32 +1,29 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { Button } from 'react-bootstrap'
-import Rating from '../components/Rating'
-import axios from 'axios';
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import Rating from '../components/Rating';
+import { useGetProductDetailsQuery } from '../slices/productSlice';
+
 
 
 const ProductScreen = () => {
-    const {id: productId} = useParams()
-    const [product, setProduct] = useState({});
+    const {id: productId} = useParams();
 
+    // fetching data 
+    const {data: product, isLoading, error} = useGetProductDetailsQuery(productId);
 
-    // fetching data
-    useEffect(()=>{
-    const fetchProduct = async () => {
-            const {data} = await axios.get(`/api/products/${productId}`);
-            setProduct(data);
-        };
-        fetchProduct();
-    }, [productId])
     return (
-        <div className='product-screen-container'>
+        <>
+        {   isLoading? (<h2>loading</h2>) : 
+            error? (<div>{error?.data?.message || error?.error}</div>) : 
+            (<div className='product-screen-container'>
             <Link className='btn btn-light my-3' id='product-screen-back' to='/'>Go Back</Link>
             <div className='product-screen-container2'>
                 <div className='product-screen-img-container'>
                     <img src={product.image} alt={product.name} fluid className='product-screen-img'/>
-                    <Rating className="product-screen-rating" value={product.rating} text={`(${product.numReviews})`}/>
+                    <Rating className="product-screen-rating" value={product.rating} 
+                    text={`(${product.numReviews})`}/>
                 </div>
                 <div className="product-screen-text">
                     <div className="product-screen-text-upper">
@@ -36,7 +33,8 @@ const ProductScreen = () => {
                         <div>
                             <h3 className='product-screen-subtitle'>{product.subtitle}</h3>
                         </div>
-                        <div className={product.countInStock > 0? `product-screen-status-green`:`product-screen-status-red`}>
+                        <div className={product.countInStock > 0? `product-screen-status-green`:
+                        `product-screen-status-red`}>
                             <strong>
                                 {product.countInStock > 0? 'In Stock':'Out of Stock'}
                             </strong>
@@ -47,16 +45,21 @@ const ProductScreen = () => {
                     </div>
                     <div className="product-screen-lower">
                         <div className='product-screen-price'>
-                        <span className='num'><span className='num' style={{ color: '#082750', marginRight: '5px'}}>$</span>{product.price}</span>
+                        <span className='num'><span className='num' 
+                        style={{ color: '#082750', marginRight: '5px'}}>$</span>{product.price}</span>
                         </div>
-                        <Button className='btn-block product-screen-button' type='button' disabled={product.countInStock===0}>
+                        <Button className='btn-block product-screen-button' 
+                        type='button' disabled={product.countInStock===0}>
                             Add to Cart
                         </Button>
                     </div>
                 </div>
             </div>
         </div>
+        )}
+    </>
+
     )
 }
 
-export default ProductScreen
+export default ProductScreen;
