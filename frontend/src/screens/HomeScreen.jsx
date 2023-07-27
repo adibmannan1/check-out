@@ -6,6 +6,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 
 const HomeScreen = () => {
+
   // fetching data
   const {data:products, isLoading, error} = useGetProductsQuery();
 
