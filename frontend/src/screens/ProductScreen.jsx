@@ -1,19 +1,30 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { Button } from 'react-bootstrap';
+import { Form, Row, Col, Button, ListGroup } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
 import Rating from '../components/Rating';
 import { useGetProductDetailsQuery } from '../slices/productSlice';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import {addToCart} from '../slices/cartSlice'
 
 
 const ProductScreen = () => {
     const {id: productId} = useParams();
-
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const [qty, setQty] = useState(1);
+    
     // fetching data 
     const {data: product, isLoading, error} = useGetProductDetailsQuery(productId);
 
+    const addToCartHandler = () => {
+        dispatch(addToCart({...product, qty}));
+        navigate('/cart');
+    };
+    
     return (
         <>
         {   isLoading? (<Loader/>) : 
@@ -49,10 +60,31 @@ const ProductScreen = () => {
                         <span className='num'><span className='num' 
                         style={{ color: '#082750', marginRight: '5px'}}>$</span>{product.price}</span>
                         </div>
-                        <Button className='btn-block product-screen-button' 
-                        type='button' disabled={product.countInStock===0}>
-                            Add to Cart
-                        </Button>
+
+            
+                        
+                        <div className='flex-box-div'>
+                            <Button className='btn-block product-screen-button'
+                            type='button' disabled={product.countInStock===0} onClick={addToCartHandler}>
+                                Add to Cart
+                            </Button>
+                            {product.countInStock>0 && (
+                            <div className='product-quantity'>
+                                    <h5>Quantity</h5>
+                                    <div>
+                                        <Form.Control
+                                        as='select'
+                                        value={qty}
+                                        onChange={(e) => setQty(Number(e.target.value))}>
+                                            {[...Array(product.countInStock).keys()].map(
+                                            (x) => (
+                                                <option key={x+1} value={x+1}>{x+1}</option>
+                                            ))}
+                                        </Form.Control>
+                                    </div>
+                            </div>
+                        )}
+                        </div>
                     </div>
                 </div>
             </div>

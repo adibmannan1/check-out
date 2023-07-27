@@ -345,6 +345,24 @@ table th {
     max-width: 94vw;
   }
 }
+.flex-box-div{
+  display: flex;
+}
+.product-quantity{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+.product-quantity h5{
+  flex: 1;
+}
+.product-quantity div{
+  flex: 1;
+}
+
 /* footer */
 .footer-text{
   padding: 8px !important;
